@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fatorial</title>
+	<script type="text/javascript">
+		function fatorial(){
+			var n = document.getElementById("num").value;
+			for (var i = n-1; i>0; i--)
+				n *= i; 	
+		var resposta = "O numero fatorial é: " +n;
+		document.getElementById("result").innerHTML = resposta;
+		}
+		
+    </script>
+</head>
+<body>
+	<p id="result">Insira Um Numero</p>
+		<input type="number" id="num">
+		<button onclick="fatorial();">CALCULAR</button>
+</body>
+</html>		

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TENIS POLAR</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+
+		
+    function funcao(){
+      var palav = document.getElementById("palavra").value;
+      var pala = document.getElementById("palavra").value;
+      var tamanho = palav.length;
+
+      for(var i =0; i< tamanho; i++){
+        var letra = palav.charAt(i);
+        switch(letra){
+          case 'p': var palav =  palav.replace('p', 't');break;
+          case 'o': var palav =  palav.replace('o', 'e');break;
+          case 'l': var palav =  palav.replace('l', 'n');break;
+          case 'a': var palav =  palav.replace('a', 'i');break;
+          case 'r': var palav =  palav.replace('r', 's');break;
+        }
+      }
+      resposta = "A palavra "+pala+" criptografada é: "+palav;
+      document.write(resposta);
+
+
+      
+		}
+	</script>
+
+</head>
+<body>
+  <p id="resultado">Insira uma palavra para criptografar utilizando o codigo TENIS POLAR.</p>
+  <input id="palavra">
+  <button onclick="javascript:funcao()">Verificar</button>
+
+
+</body>
+</html>

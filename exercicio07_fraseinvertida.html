@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Frase Invertida</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+
+		
+    function funcao(){
+      var frase = document.getElementById("frase").value;
+      var f = document.getElementById("frase").value;
+      var tamanho = frase.length-1;
+      frase = frase.split('');
+
+       for(var i = 0; i < tamanho/2; i++){
+        var letraIni = frase[i];
+        var letraFim = frase[tamanho-i];
+
+        frase[i] = letraFim;
+        frase[tamanho-i] = letraIni;
+      }
+      frase = frase.join('');
+      resposta = "A frase "+f+" invertida é: "+frase;
+      document.write(resposta);
+
+
+      
+		}
+	</script>
+
+</head>
+<body>
+  <p id="resultado">Insira uma frase para ser invertida.</p>
+  <input id="frase">
+  <button onclick="javascript:funcao()">Verificar</button>
+
+
+</body>
+</html>

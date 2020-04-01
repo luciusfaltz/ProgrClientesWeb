@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Palíndromo</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+
+		
+    function funcao(){
+      var palav = document.getElementById("palavra").value;
+      var qtd = palav.length;
+      var v1 = qtd;
+
+      for(var i = 0; i< v1/2; i++){
+        if(palav[i] == palav[qtd-1]){
+          qtd--;
+          var resposta="A palavra "+palav+" é um Palíndromo"
+        }
+        else{
+          i == v1;
+          var resposta = "A palavra "+palav+" não é um Palíndromo";
+        }
+
+      }
+      document.write(resposta);
+
+
+      
+		}
+	</script>
+
+</head>
+<body>
+  <p id="resultado">Insira uma palavra para verificarmos se é um palíndromo ou não.</p>
+  <input id="palavra">
+  <button onclick="javascript:funcao()">Verificar</button>
+
+
+</body>
+</html>

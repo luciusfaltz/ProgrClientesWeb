@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sequência de Fibonacci</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+
+		
+    function funcao(){
+      var num1 = document.getElementById("numero").value;
+      var exibe = "A Sequência de Fibonacci do número "+num1+" é: ";
+      document.write(exibe);
+
+        var f = [0, 0];
+
+       f[0] = 0;
+       f[1] = 1;
+       f[2] = 1;
+      for(var i=0; i<=num1; i++){
+         f[0] = 0;
+         f[1] = 1;
+         f[2] = 1;
+         f[i] = f[i-1] + f[i-2];
+      }
+      document.write(f);
+		}
+	</script>
+
+</head>
+<body>
+  <p id="resultado">Insira um Número Inteiro Positivo</p>
+  <input id="numero">
+  <button onclick="javascript:funcao()">Calcular</button>
+
+
+</body>
+</html>

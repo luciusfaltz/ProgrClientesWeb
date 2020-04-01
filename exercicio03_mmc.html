@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MMC</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+
+		function mdc(x,y) {
+			while(y != 0){
+        var r = x%y;
+        x=y;
+        y=r;
+      }
+      return x;
+    }
+    function fazMMC(){
+      var num1 = document.getElementById("numero").value;
+      var num2 = document.getElementById("numero2").value;
+      var numero = num1 * (num2 / mdc(num1,num2));
+
+			var exibe = "O mmc entre os números "+num1+" e "+num2+" é "+numero+".";
+			document.getElementById("resultado").innerHTML = exibe;
+		}
+	</script>
+
+</head>
+<body>
+  <p id="resultado">Insira dois Numeros Inteiros Positivos</p>
+  <input id="numero">
+  <input id="numero2">
+  <button onclick="javascript:fazMMC()">Calcular</button>
+</body>
+</html>
